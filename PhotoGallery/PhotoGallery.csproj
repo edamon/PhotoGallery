@@ -207,6 +207,9 @@
     <Compile Include="HtmlTags\Extensions\StyleLink.cs" />
     <Compile Include="HtmlTags\Extensions\Tags.cs" />
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\CalendarDayModel.cs" />
+    <Compile Include="Models\EventModel.cs" />
+    <Compile Include="Models\MonthCalendarModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
