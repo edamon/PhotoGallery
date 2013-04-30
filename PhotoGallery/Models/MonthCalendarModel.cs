@@ -2,15 +2,46 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using PhotoGallery.Extensions;
 
 namespace PhotoGallery.Models
 {
     public class MonthCalendarModel
     {
         public DateTime CurrentMonth { get; set; }
-        public DateTime PreviousMonth { get; set; }
-        public DateTime NextMonth { get; set; }
+        
+        public DateTime PreviousMonth
+        {
+            get
+            {
+                return CurrentMonth.Date.AddMonths(-1);
+            }
+        }
 
-        public IEnumerable<CalendarDayModel> CalendarDays { get; set; }
+        public DateTime NextMonth
+        {
+            get
+            {
+                return CurrentMonth.Date.AddMonths(1);
+            }
+        }
+
+        public DateTime FirstDayToRender
+        {
+            get
+            {
+                return CurrentMonth.FirstDayOfMonth().AddDays(-(int)CurrentMonth.FirstWeekDayOfMonth());
+            }
+        }
+        
+        public DateTime LastDayToRender
+        {
+            get
+            {
+                return CurrentMonth.LastDayOfMonth().AddDays(6 - (int)CurrentMonth.LastWeekDayOfMonth());
+            }
+        }
+
+        public List<CalendarDayModel> CalendarDays { get; set; }
     }
 }
