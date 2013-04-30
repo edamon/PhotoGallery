@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Web;
-using System.Web.Mvc;
-using PhotoGallery.Extensions;
+﻿using System.Web.Mvc;
 
 namespace PhotoGallery.Controllers
 {
@@ -48,5 +42,9 @@ namespace PhotoGallery.Controllers
             return View();
         }
 
+        public ActionResult EventsBackbone()
+        {
+            return View();
+        }
     }
 }

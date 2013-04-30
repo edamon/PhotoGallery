@@ -38,10 +38,15 @@ namespace PhotoGallery.Models
         {
             get
             {
-                return CurrentMonth.LastDayOfMonth().AddDays(6 - (int)CurrentMonth.LastWeekDayOfMonth());
+                return CurrentMonth.LastDayOfMonth().AddDays(5 - (int)CurrentMonth.LastWeekDayOfMonth());
             }
         }
 
-        public List<CalendarDayModel> CalendarDays { get; set; }
+        private List<CalendarDayModel> _calendarDays = new List<CalendarDayModel>();
+        public List<CalendarDayModel> CalendarDays
+        {
+            get { return _calendarDays; }
+            set { _calendarDays = value; }
+        }
     }
 }

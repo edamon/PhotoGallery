@@ -14,6 +14,11 @@ namespace PhotoGallery
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "EventCalendar",
+                url: "Event/EventCalendar/{dateTimeMonth}",
+                defaults: new {controller = "Event", action = "EventCalendar", dateTimeMonth = UrlParameter.Optional});
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }

@@ -1,17 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace PhotoGallery.Models
 {
     public class EventModel
     {
+        private DateTime _startDate;
+
         public string Title { get; set; }
         public string Description { get; set; }
         public string Location { get; set; }
+        public string DetailsUrl { get; set; }
+        public string DateString { get { return _startDate.ToShortDateString(); } }
+        public string EventTime { get { return _startDate.ToShortTimeString(); } }
 
-        public DateTime StartDate { get; set; }
+        public DateTime StartDate
+        {
+            get { return _startDate; }
+            set { _startDate = value; }
+        }
 
         /// <summary>
         /// Date to begin displaying on customer site

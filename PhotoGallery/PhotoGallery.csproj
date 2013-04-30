@@ -306,6 +306,8 @@
     <Content Include="favicon.ico" />
     <Content Include="Foundation_readme.txt" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\backbone-min.js" />
+    <Content Include="Scripts\eventCalendar\eventCalendar.js" />
     <Content Include="Scripts\flex\jquery.flexslider.min.js">
       <DependentUpon>jquery.flexslider.js</DependentUpon>
     </Content>
@@ -389,6 +391,7 @@
     <Content Include="Scripts\foundation\jquery.foundation.topbar.js" />
     <Content Include="Scripts\foundation\jquery.placeholder.js" />
     <Content Include="Scripts\foundation\modernizr.foundation.js" />
+    <Content Include="Scripts\handlebars.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -410,6 +413,8 @@
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\modernizr.custom.17475.js" />
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Scripts\underscore-min.js" />
     <Content Include="Views\Examples\01-default.html" />
     <Content Include="Views\Examples\02-jquery.html" />
     <Content Include="Views\Examples\03-multiple-image-sets.html" />
@@ -515,6 +520,7 @@
     <Content Include="Views\Home\featured.cshtml" />
     <Content Include="Views\Home\EventsMock.cshtml" />
     <Content Include="Views\Home\Events.cshtml" />
+    <Content Include="Views\Home\EventsBackbone.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
