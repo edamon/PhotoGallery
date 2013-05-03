@@ -22,9 +22,17 @@ var EventCalendar = EventCalendar || {};
             var self = this,
                 date = new Date();
 
-            self.template = handlebars.compile($('#eventCalendar').html());
-            self.model = new EventCalendar.MonthCalendarModel();
-            self.getCalendar(date.getMonth(), date.getFullYear());
+            var templatePath = '/Scripts/eventCalendar/eventCalendar.html';
+            
+            $.ajax({
+                url: templatePath,
+                cache: false,
+                success: function (data) {
+                    self.template = Handlebars.compile(data);
+                    self.model = new EventCalendar.MonthCalendarModel();
+                    self.getCalendar(date.getMonth(), date.getFullYear());
+                }
+            });
 
             return self;
         },

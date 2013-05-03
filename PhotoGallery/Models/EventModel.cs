@@ -12,6 +12,7 @@ namespace PhotoGallery.Models
         public string DetailsUrl { get; set; }
         public string DateString { get { return _startDate.ToShortDateString(); } }
         public string EventTime { get { return _startDate.ToShortTimeString(); } }
+        public string ImageUrl { get; set; }
 
         public DateTime StartDate
         {

@@ -91,7 +91,7 @@
     text-decoration: none;
 }
 
-.day > article:hover .event-text {
+.day > article:hover .event-details {
     display: block;
 }
 
@@ -104,8 +104,23 @@
     margin-top: 2px;
     text-decoration: none;
 }
+
+.day > article .event-details {
+    border: 1px solid black;
+    position: relative;
+    height: 300px;
+    width: 279px;
+    background: #ffffff;
+    margin: 5px;
+    padding: 10px;
+}
+
+.day > article .event-details img {
+    bottom: 0;
+    position: absolute;
+}
     
-.calendar .event-text {
+.calendar .event-text, .calendar .event-details {
     display: none;
 }
 
@@ -152,6 +167,10 @@
         margin-bottom: 5px;
     }
 
+    .day > article:hover .event-details {
+        display: none;
+    }
+
     .day > article .event-text, .day > article .event-time, .day > article:hover .event-text, .day > article:hover .event-time {
         display: inline;
     }
@@ -162,11 +181,15 @@
 
     .calendar .month li:last-child {
     margin-bottom: 10px!important;
-}
+    }
 }
 
 @media only screen and (device-width:768px) and (device-height:1024px) and (orientation:landscape) {
     .day > article .event-text, .day > article .event-time, .day > article:hover .event-text, .day > article:hover .event-time {
         display: inline;
+    }
+
+    .day > article:hover .event-details {
+        display: none;
     }
 }

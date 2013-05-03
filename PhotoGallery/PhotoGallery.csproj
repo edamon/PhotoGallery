@@ -307,6 +307,7 @@
     <Content Include="Foundation_readme.txt" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\backbone-min.js" />
+    <Content Include="Scripts\eventCalendar\eventCalendar.html" />
     <Content Include="Scripts\eventCalendar\eventCalendar.js" />
     <Content Include="Scripts\flex\jquery.flexslider.min.js">
       <DependentUpon>jquery.flexslider.js</DependentUpon>

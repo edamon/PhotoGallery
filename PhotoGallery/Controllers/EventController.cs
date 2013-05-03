@@ -65,14 +65,16 @@ namespace PhotoGallery.Controllers
                             Title = "Good Times",
                             Description = "Awesome Event",
                             StartDate = new DateTime(2013, 4, 20, 13, 0, 0),
-                            Location = "Milwaukee, WI"
+                            Location = "Milwaukee, WI",
+                            ImageUrl = "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTdO9hFkoLPaXrwl0n6ZCQA65Yf6bv33_qVzlVme522Q9H2R4IN9Q"
                         },
                         new EventModel
                         {
                             Title = "May Day Ride",
                             Description = "Big group ride",
                             StartDate = new DateTime(2013, 5, 1, 18, 0, 0),
-                            Location = "Milwaukee, WI"
+                            Location = "Milwaukee, WI",
+                            ImageUrl = "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTRBu7sN93h_yznGAEfF4aMq0a-QNFrVnHFgf9wWVCz5aDcUKJ1"
                         }
                 }; 
 

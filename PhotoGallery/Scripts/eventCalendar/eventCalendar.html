@@ -1,0 +1,40 @@
+﻿    <h2>Events</h2>
+    <div class="row">
+        <div class="calendar">
+            <ul class="month-browser">
+                <li class="calendar_nav"><a href="#" direction="previous">{{PreviousMonthString}}</a></li>
+                <li id="current-month">{{CurrentMonthString}} {{CurrentYearString}}</li>
+                <li class="calendar_nav"><a href="#" direction="next">{{NextMonthString}}</a></li>
+            </ul>
+            <ul class="weekdays">
+                <li>SUNDAY</li>
+                <li>MONDAY</li>
+                <li>TUESDAY</li>
+                <li>WEDNESDAY</li>
+                <li>THURSDAY</li>
+                <li>FRIDAY</li>
+                <li>SATURDAY</li>
+            </ul>
+            <ul class="month">
+                {{#each CalendarDays}}
+                    <li class="{{#unless this.IsInCurrentMonth}}filler {{/unless}}{{#unless this.HasEvents}}empty {{/unless}}day">
+                        <time datetime="{{this.DateString}}"><span class="day-name">{{this.DayOfWeek}},</span> <span class="month-name">{{this.MonthAbbreviation}} </span>{{this.DayOfMonth}}</time>
+                        {{#if this.HasEvents}}
+                            {{#each this.Events}}
+                                <article>
+                                    <header><a href="{{this.DetailsUrl}}" class="event-title">{{this.Title}}</a></header>
+                                    <time datetime="{{this.EventTime}}" class="event-time">{{this.EventTime}}</time>
+                                    <div class="event-text">{{this.Description}}</div>
+                                    <address>{{this.Location}}</address>
+                                    <div class="event-details">
+                                        <p>{{this.Description}}</p>                                      
+                                        <img src="{{this.ImageUrl}}"/>
+                                    </div>
+                                </article>                    
+                            {{/each}}                            
+                        {{/if}}
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>  
